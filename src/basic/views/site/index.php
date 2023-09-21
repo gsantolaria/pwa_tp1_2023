@@ -2,7 +2,7 @@
 
 /** @var yii\web\View $this */
 
-$this->title = 'My Yii Application';
+$this->title = 'PWA 2023 - TP N1';
 ?>
 <div class="site-index">
 

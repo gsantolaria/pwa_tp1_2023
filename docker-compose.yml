@@ -18,6 +18,10 @@ services:
       - ./src/composer/cache:/root/.composer/cache:delegated
       - ./src/basic:/app:delegated
       - .:/var/www/html
+    environment:
+        DDBB_NAME: ${POSTGRES_DB}
+        DDBB_HOST: db
+        DDBB_PASSWORD: ${POSTGRES_PASSWORD}
     depends_on:
       - db
   adminer:
