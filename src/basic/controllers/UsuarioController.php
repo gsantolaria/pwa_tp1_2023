@@ -99,7 +99,7 @@ class UsuarioController extends Controller
      * @return string|\yii\web\Response
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionUpdate($id)
+    /* public function actionUpdate($id)
     {
         $model = $this->findModel($id);
 
@@ -110,7 +110,28 @@ class UsuarioController extends Controller
         return $this->render('update', [
             'model' => $model,
         ]);
+    } */
+
+    // Modifiquè la funcion actualizar para que no revele la contrasena al guardar los cambios
+    
+    public function actionUpdate($id)
+    {
+        $model = $this->findModel($id);
+
+        if ($this->request->isPost && $model->load($this->request->post())) {
+            if (isset($model->password)) {
+                $model->password = Yii::$app->getSecurity()->generatePasswordHash($model->password);
+            }
+            if ($model->save()) {
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
+        }
+
+        return $this->render('update', [
+            'model' => $model,
+        ]);
     }
+
 
     /**
      * Deletes an existing Usuario model.
