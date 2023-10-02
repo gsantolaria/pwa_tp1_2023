@@ -1,2 +1,5 @@
 data/pgdata
-.env
+.env    
+.vscode
+.DS_Store
+src/composer/*
