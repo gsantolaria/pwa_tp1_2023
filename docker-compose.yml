@@ -22,6 +22,7 @@ services:
         DDBB_NAME: ${POSTGRES_DB}
         DDBB_HOST: db
         DDBB_PASSWORD: ${POSTGRES_PASSWORD}
+        PRODUCCION: ${PRODUCCION}
     depends_on:
       - db
   adminer:
