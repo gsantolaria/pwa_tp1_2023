@@ -23,6 +23,7 @@ services:
         DDBB_HOST: db
         DDBB_PASSWORD: ${POSTGRES_PASSWORD}
         PRODUCCION: ${PRODUCCION}
+        PHP_USER_ID: ${PHP_USER_ID}
     depends_on:
       - db
   adminer:
