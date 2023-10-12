@@ -53,7 +53,7 @@ $config = [
                     'class' => 'yii\rest\UrlRule',
                     'pluralize' => false,
                     'controller' => ['apiv1/carrera', 'apiv1/profesor','apiv1/materia', 'apiv1/aula',
-                                    'apiv1/reserva-aula', 'apiv1/horario-materia'],
+                                    'apiv1/reservaaula', 'apiv1/horariomateria'],
                 ]
             ],
         ],
