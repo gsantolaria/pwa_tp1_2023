@@ -125,4 +125,24 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+
+    /**
+     * Displays Vue page.
+     *
+     * @return string
+     */
+    public function actionVue()
+    {
+        return $this->render('vue');
+    }
+
+    /**
+     * Displays Vue2 page.
+     *
+     * @return string
+     */
+    public function actionVue2()
+    {
+        return $this->render('vue2');
+    }
 }
